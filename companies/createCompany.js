@@ -10,7 +10,7 @@ function createCompany(req, res) {
     .then(company => {
       res.status(201).json(company);
     })
-    .catch(err => {
+    .catch(() => {
       res.status(400).json({
         errorMessage: "An error occured while adding a company!"
       });

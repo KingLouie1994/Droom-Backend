@@ -10,7 +10,7 @@ function editCompany(req, res) {
         message: "Company edited successfully!"
       })
     })
-    .catch(err => {
+    .catch(() => {
       res.status(500).json({
         message: "Company could not be edited!"
       })

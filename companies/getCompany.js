@@ -7,7 +7,7 @@ function getCompany(req, res) {
     .then(company => {
       res.status(200).json(company)
     })
-    .catch(err => {
+    .catch(() => {
       res.status(404).json({
         errorMessage: "Unexpected error occurred while getting this company! Try again... If problem persists ask Google"
       })

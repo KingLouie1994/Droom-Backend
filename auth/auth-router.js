@@ -50,7 +50,7 @@ router.post("/register", validateRegInfoUser, (req, res) => {
     .then(saved => {
       res.status(201).json(saved);
     })
-    .catch(error => {
+    .catch(()=> {
       res.status(500).json({
         message: "There was an error registrating this new user"
       });
@@ -75,7 +75,7 @@ router.post("/login", validateLoginInfoUser, (req, res) => {
         });
       }
     })
-    .catch(error => {
+    .catch(() => {
       res.status(500).json({
         message: "There was an error logging in"
       });
@@ -93,7 +93,7 @@ router.post("/register-admin", validateRegInfo, (req, res) => {
     .then(savedAdmin => {
       res.status(201).json(savedAdmin);
     })
-    .catch(err => {
+    .catch(() => {
       res.status(500).json({
         errorMessage: "Admin account couldn't be created!"
       });
@@ -117,7 +117,7 @@ router.post("/login-admin", validateLoginInfo, (req, res) => {
         })
       }
     })
-    .catch(err => {
+    .catch(() => {
       res.status(500).json({
         errorMessage: "Login unsuccessful!"
       });

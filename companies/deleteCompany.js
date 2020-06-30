@@ -9,7 +9,7 @@ function deleteCompany(req, res) {
         message: "Company removed!"
       })
     })
-    .catch(err => {
+    .catch(() => {
       res.status(500).json({
         message: "Company could not be edited!"
       })

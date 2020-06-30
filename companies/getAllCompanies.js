@@ -5,7 +5,7 @@ function getAllCompanies(req, res) {
     .then(companies => {
       res.status(200).json(companies);
     })
-    .catch(err => {
+    .catch(() => {
       res.status(404).json({
         errorMessage: "Could not get companies!",
       })
