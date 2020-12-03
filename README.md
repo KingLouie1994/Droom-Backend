@@ -1,3 +1,1 @@
-# Back-end
-
-Lambda School backend project
+# Lambda School frontend project for a job search platform
